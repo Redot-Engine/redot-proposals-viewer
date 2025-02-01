@@ -1,7 +1,17 @@
 {
   "name": "redot-proposals-viewer",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "author": "charlottewiltshire0",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Redot-Engine/redot-proposals-viewer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Redot-Engine/redot-proposals-viewer.git"
+  },
+  "homepage": "https://github.com/Redot-Engine/redot-proposals-viewer#readme",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -10,7 +20,8 @@
     "lint:fix": "next lint --fix",
     "lint:strict": "next lint '*/**/*.{js,jsx,ts,tsx}'",
     "format": "prettier -c --cache .",
-    "format:fix": "prettier -w . --cache"
+    "format:fix": "prettier -w . --cache",
+    "prepare": "husky"
   },
   "dependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -41,6 +52,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "eslint-config-prettier": "^10.0.1",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",

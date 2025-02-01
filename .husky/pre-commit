@@ -1,0 +1,20 @@
+echo "🧹 Running pre-commit checks..."
+
+# Run linting and automatically fix issues
+echo "🔍 Running lint:fix..."
+bun run lint:fix
+if [ $? -ne 0 ]; then
+    echo "❌ Linting errors detected. Please fix them before committing."
+    exit 1
+fi
+
+# Run formatting and automatically fix issues
+echo "✨ Running format:fix..."
+bun run format:fix
+if [ $? -ne 0 ]; then
+    echo "❌ Formatting errors detected. Please fix them before committing."
+    exit 1
+fi
+
+echo "✅ All pre-commit checks passed! 🎉"
+exit 0
