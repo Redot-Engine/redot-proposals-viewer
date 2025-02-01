@@ -22,7 +22,7 @@ export const Header = () => {
             <nav className="flex items-center gap-4">
               <ModeToggle />
               <Button asChild>
-                <Link href={links.github + "/redot-proposals"}>Proposals</Link>
+                <Link href="https://github.com/Redot-Engine/redot-proposals">Proposals</Link>
               </Button>
             </nav>
           </div>
