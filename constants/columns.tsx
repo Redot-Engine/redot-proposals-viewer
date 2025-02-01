@@ -59,7 +59,7 @@ export const columns: ColumnDef<Issue>[] = [
       const negative = reactions["-1"] || 0;
 
       return (
-        <span className="flex items-center space-x-2">
+        <span className="flex items-center justify-center space-x-2">
           <span className="mr-1 text-green-500">+ {positive}</span>
           <span className="text-red-500">- {negative}</span>
         </span>
