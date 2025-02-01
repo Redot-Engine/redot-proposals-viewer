@@ -15,7 +15,10 @@ export const Header = () => {
       <div className="py-5">
         <div className="w-full px-5 lg:px-40">
           <div className="flex items-center justify-between">
-            <Link href="/" className="select-none rounded-md border border-slate-800 bg-black p-2">
+            <Link
+              href="https://www.redotengine.org/"
+              className="select-none rounded-md border border-slate-800 bg-black p-2"
+            >
               <Image src="/logo.webp" alt="Redot Engine Logo" width={30} height={30} />
             </Link>
             <nav className="flex items-center gap-4">
