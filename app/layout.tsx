@@ -11,8 +11,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://proposals.redotengine.org"),
   title: "Redot Proposal Viewer",
   description: "A platform to browse, review, and discuss proposals for the Redot Engine.",
+  openGraph: {
+    siteName: "Redot Engine",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default async function RootLayout({
