@@ -4,7 +4,6 @@ description: Installs Bun & package dependencies
 runs:
   using: composite
   steps:
-
     - name: Install Bun
       uses: oven-sh/setup-bun@v2
 

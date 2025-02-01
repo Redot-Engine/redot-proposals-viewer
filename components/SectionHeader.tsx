@@ -50,7 +50,7 @@ export default function SectionHeader({
       {description && (
         <p
           className={cn(
-            "text-muted-foreground mt-5 text-xl tracking-tighter md:text-[22px] md:leading-[30px]",
+            "mt-5 text-xl tracking-tighter text-muted-foreground md:text-[22px] md:leading-[30px]",
             descriptionTextAlignClass
           )}
         >

@@ -7,11 +7,7 @@ interface BannerProps {
   readonly link: string;
 }
 
-export default function Banner({
-  mainMessage,
-  subMessage,
-  link,
-}: Readonly<BannerProps>) {
+export default function Banner({ mainMessage, subMessage, link }: Readonly<BannerProps>) {
   if (!mainMessage) return null;
 
   return (
