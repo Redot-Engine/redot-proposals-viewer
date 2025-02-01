@@ -1,0 +1,29 @@
+name: "Welcome Bot"
+
+on:
+  pull_request_target:
+    branches: [master]
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Welcome First Time Contributors
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: zephyrproject-rtos/action-first-interaction@7e6446f8439d8b4399169880c36a3a12b5747699
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-opened-message: |
+            Hello, and thank you for contributing to the Redot website! 🎉
+
+            Here’s what will happen next:
+            1. Our team will review your pull request and might provide feedback or request changes.
+               Don’t hesitate to ask if you have any questions or need help addressing feedback!
+
+            2. Once approved, your contribution will be merged and become part of the Redot community. 🥳
+
+            Thank you for your effort, and welcome aboard! 🚀

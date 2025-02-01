@@ -1,0 +1,31 @@
+echo '🚨 Validating the branch name before pushing the code'
+
+local_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+valid_branch_regex="^(feat|feature|fix|docs|style|refactor|test|chore)\/[a-zA-Z0-9#]+([-_#][a-zA-Z0-9#]+)*$"
+
+if [[ ! $local_branch =~ $valid_branch_regex ]]
+then
+    echo "❌🚀 Oops! Your branch name doesn't match our rhythm. We groove to these types: feat, fix, docs, style, refactor, test, chore. Please follow the format: <type>/<alias>. Example: feature/awesome-update 🎵✨"
+    exit 1
+fi
+
+# Run linting
+echo "🧹 Running lint check..."
+bun run lint
+if [ $? -ne 0 ]; then
+    echo "❌ Linting failed. Please fix the issues before pushing."
+    exit 1
+fi
+
+# Run formatting
+echo "✨ Running format check..."
+bun run format
+if [ $? -ne 0 ]; then
+    echo "❌ Code formatting check failed. Please format your code before pushing."
+    exit 1
+fi
+
+echo "✅ All checks passed! Pushing the code... 🚀"
+
+exit 0

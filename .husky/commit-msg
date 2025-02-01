@@ -1,0 +1,11 @@
+echo "📜 Validating commit message format..."
+
+# Run commitlint to check the commit message
+bun run commitlint --edit "$1"
+if [ $? -ne 0 ]; then
+    echo "❌ Commit message does not follow the conventional commit format."
+    exit 1
+fi
+
+echo "✅ Commit message is valid! 🎉"
+exit 0
