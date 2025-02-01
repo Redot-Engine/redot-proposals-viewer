@@ -2,7 +2,6 @@ import Banner from "@/components/Banner";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { links } from "@/constants/links";
 import { ModeToggle } from "@/components/ModeToggle";
 
 export const Header = () => {
