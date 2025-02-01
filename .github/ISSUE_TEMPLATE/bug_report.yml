@@ -1,0 +1,56 @@
+name: Bug Report
+description: Submit a report to help improve our project. Please write in English.
+title: "[BUG] Provide a short title for your bug"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug to help us enhance our project!
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: Clearly describe the issue you're experiencing.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to recreate the issue. For example, "1. Go to '...', 2. Click on '...', 3. See error"
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen instead.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Details
+      description: |
+        Include any relevant screenshots or logs.
+    validations:
+      required: true
+  - type: input
+    id: OS
+    attributes:
+      label: Operating System
+      description: Which operating system are you using (e.g., Windows 11/Linux Distro/Steam Deck)?
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Chrome (including Arc, Brave, Opera, Vivaldi)
+        - Microsoft Edge
+        - Firefox
+        - Safari
+        - Other (please specify)
