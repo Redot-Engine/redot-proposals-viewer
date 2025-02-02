@@ -1,8 +1,8 @@
 import type { ColumnDef } from "@tanstack/react-table";
-import { IconExternalLink } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpDown } from "lucide-react";
 import { Issue } from "@/components/GithubIssuesTable";
+import Link from "next/link";
 
 export const columns: ColumnDef<Issue>[] = [
   {
@@ -11,33 +11,15 @@ export const columns: ColumnDef<Issue>[] = [
     cell: ({ row }) => {
       const issue = row.original;
       return (
-        <a
+        <Link
           href={issue.html_url}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-blue-600 hover:underline dark:text-blue-500"
         >
           {issue.title}
-          <IconExternalLink className="ml-2 h-4 w-4" />
-        </a>
+        </Link>
       );
-    },
-  },
-  {
-    accessorKey: "created_at",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Created At
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-    cell: ({ row }) => {
-      return new Date(row.getValue("created_at")).toLocaleDateString();
     },
   },
   {
