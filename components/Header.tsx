@@ -6,7 +6,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-[50] w-full backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xs">
       <Banner
         subMessage="Upgrade to the latest version."
         mainMessage="Redot Engine is now stable!"
@@ -17,7 +17,7 @@ export const Header = () => {
           <div className="flex items-center justify-between">
             <Link
               href="https://www.redotengine.org/"
-              className="select-none rounded-md border border-slate-800 bg-black p-2"
+              className="rounded-md border border-slate-800 bg-black p-2 select-none"
             >
               <Image src="/logo.webp" alt="Redot Engine Logo" width={30} height={30} />
             </Link>
