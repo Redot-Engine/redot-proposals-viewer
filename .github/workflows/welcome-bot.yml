@@ -1,4 +1,4 @@
-name: "Welcome Bot"
+name: WelcomeBot
 
 on:
   pull_request_target:
@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: zephyrproject-rtos/action-first-interaction@7e6446f8439d8b4399169880c36a3a12b5747699
+      - uses: zephyrproject-rtos/action-first-interaction@1d8459ca65b335265f1285568221e229d45a995e
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-opened-message: |
+          pr-message: |
             Hello, and thank you for contributing to the Redot website! 🎉
 
             Here’s what will happen next:
@@ -27,3 +27,9 @@ jobs:
             2. Once approved, your contribution will be merged and become part of the Redot community. 🥳
 
             Thank you for your effort, and welcome aboard! 🚀
+          issue-message: |
+            Hello, and thank you for creating an issue on the Redot website! 🎉
+
+            We’ve received your report, and our team will review it soon. If you have more information to share or if you'd like to provide further context, please feel free to comment below!
+
+            We’re happy to have you contributing to Redot, and we’ll keep you updated as we work on resolving this. 🚀
