@@ -17,7 +17,7 @@ export const Header = () => {
           <div className="flex items-center justify-between">
             <Link
               href="https://www.redotengine.org/"
-              className="select-none rounded-md border border-slate-800 bg-black p-2"
+              className="rounded-md border border-slate-800 bg-black p-2 select-none"
             >
               <Image src="/logo.webp" alt="Redot Engine Logo" width={30} height={30} />
             </Link>
